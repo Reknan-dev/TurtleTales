@@ -8,7 +8,7 @@ export default function Login() {
   const formData = useSelector((state) => state.user.formData);
   const errors = useSelector((state) => state.user.errors);
   const router = useRouter();
-
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const handleInputChange = (field) => (e) => {
     dispatch(setFormData({ ...formData, [field]: e.target.value }));
   };
