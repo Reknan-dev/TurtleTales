@@ -29,7 +29,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post("http://localhost:3000/register", formData);
+      await axios.post("/register", formData);
       dispatch(setRegistrationSuccess(true));
       dispatch(clearFormData());
     } catch (error) {
