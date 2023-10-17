@@ -7,7 +7,6 @@ const userRoutes = require("./Routes/userRoutes");
 const markerRoutes = require("./Routes/markerRoutes");
 require("dotenv").config({ path: "./.env.example" });
 
-
 app.use(bodyParser.json());
 app.use(cors());
 app.use(userRoutes);
