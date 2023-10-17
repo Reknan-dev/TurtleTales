@@ -12,7 +12,7 @@ import {
 export default function Register() {
   const dispatch = useDispatch();
   const router = useRouter();
-
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   // Recupera lo stato dallo store di Redux
   const formData = useSelector((state) => state.user.formData);
   const errors = useSelector((state) => state.user.errors);
@@ -29,7 +29,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post("/register", formData);
+      await axios.post(`${API_URL}/register`, formData);
       dispatch(setRegistrationSuccess(true));
       dispatch(clearFormData());
     } catch (error) {
