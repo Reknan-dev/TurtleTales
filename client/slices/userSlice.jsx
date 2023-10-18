@@ -5,7 +5,9 @@ const userSlice = createSlice({
   initialState: {
     token: null,
     username: null,
-    errors: {},
+    errors: {
+      general: null,
+    },
     registrationSuccess: false,
     formData: {
       username: "",
