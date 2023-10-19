@@ -13,7 +13,7 @@ export default function Register() {
   const dispatch = useDispatch();
   const router = useRouter();
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
-  // Recupera lo stato dallo store di Redux
+
   const formData = useSelector((state) => state.user.formData);
   const errors = useSelector((state) => state.user.errors);
   const registrationSuccess = useSelector(
@@ -79,7 +79,7 @@ export default function Register() {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 value={formData.username}
                 onChange={(e) =>
-                  setFormData({ ...formData, username: e.target.value })
+                  setFormData(dispatch({ ...formData, username: e.target.value }))
                 }
                 placeholder="Username"
                 required
@@ -94,7 +94,7 @@ export default function Register() {
                 type="email"
                 value={formData.email}
                 onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
+                  setFormData(dispatch({ ...formData, email: e.target.value }))
                 }
                 placeholder="Email"
                 required
@@ -109,7 +109,7 @@ export default function Register() {
                 type="password"
                 value={formData.password}
                 onChange={(e) =>
-                  setFormData({ ...formData, password: e.target.value })
+                  setFormData(dispatch({ ...formData, password: e.target.value }))
                 }
                 placeholder="Password"
                 required
@@ -124,7 +124,7 @@ export default function Register() {
                 type="password"
                 value={formData.confirmPassword}
                 onChange={(e) =>
-                  setFormData({ ...formData, confirmPassword: e.target.value })
+                  setFormData(dispatch({ ...formData, confirmPassword: e.target.value }))
                 }
                 placeholder="Conferma Password"
                 required
