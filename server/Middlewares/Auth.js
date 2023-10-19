@@ -4,7 +4,7 @@ const auth = (req, res, next) => {
   const authHeader = req.header("Authorization");
 
   if (!authHeader) {
-    return res.sendStatus(401);
+    return res.status(401).json({ error: "No Authorization header provided" });
   }
 
   const tokenParts = authHeader.split(" ");
