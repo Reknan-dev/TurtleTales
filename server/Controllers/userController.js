@@ -4,10 +4,11 @@ const jwt = require("jsonwebtoken");
 
 // Registrazione
 registerUser = async (req, res) => {
-  console.log("Register endpoint hit");
+  console.log("Dentro l'endpoint di registrazione");
   const { username, password, email } = req.body;
 
   const existingUser = await User.findOne({ email });
+  console.log("Controllo utente esistente:", existingUser);
   const existingUserByUsername = await User.findOne({ username });
 
   const errors = {};
@@ -32,6 +33,7 @@ registerUser = async (req, res) => {
       email,
     });
     await user.save();
+    console.log("Utente salvato con successo");
     res.status(201).send({ message: "Utente registrato con successo!" });
   } catch (error) {
     res.status(500).send({ error: "Errore durante la registrazione." });
