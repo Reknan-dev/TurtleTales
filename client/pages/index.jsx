@@ -79,7 +79,7 @@ export default function Register() {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 value={formData.username}
                 onChange={(e) =>
-                  setFormData(dispatch({ ...formData, username: e.target.value }))
+                  dispatch(setFormData({ ...formData, username: e.target.value }))
                 }
                 placeholder="Username"
                 required
@@ -94,7 +94,7 @@ export default function Register() {
                 type="email"
                 value={formData.email}
                 onChange={(e) =>
-                  setFormData(dispatch({ ...formData, email: e.target.value }))
+                  dispatch(setFormData({ ...formData, email: e.target.value }))
                 }
                 placeholder="Email"
                 required
@@ -109,7 +109,7 @@ export default function Register() {
                 type="password"
                 value={formData.password}
                 onChange={(e) =>
-                  setFormData(dispatch({ ...formData, password: e.target.value }))
+                  dispatch(setFormData({ ...formData, password: e.target.value }))
                 }
                 placeholder="Password"
                 required
@@ -124,7 +124,7 @@ export default function Register() {
                 type="password"
                 value={formData.confirmPassword}
                 onChange={(e) =>
-                  setFormData(dispatch({ ...formData, confirmPassword: e.target.value }))
+                  dispatch(setFormData({ ...formData, confirmPassword: e.target.value }))
                 }
                 placeholder="Conferma Password"
                 required
