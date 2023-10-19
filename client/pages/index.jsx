@@ -30,6 +30,7 @@ export default function Register() {
     try {
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, formData);
       dispatch(setRegistrationSuccess(true));
+      router.push("/login");
       dispatch(clearFormData());
     } catch (error) {
       if (error.response && error.response.status === 409) {
