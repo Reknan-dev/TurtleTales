@@ -29,7 +29,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post(`${API_URL}/register`, formData);
+      await axios.post("/api/register", formData);
       dispatch(setRegistrationSuccess(true));
       dispatch(clearFormData());
     } catch (error) {
