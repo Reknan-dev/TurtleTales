@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        process.env.NEXT_PUBLIC_API_URL,
+        `${process.env.NEXT_PUBLIC_API_URL}/register`,
         formData
       );
       localStorage.setItem("token", response.data.token);
