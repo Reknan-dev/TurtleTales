@@ -71,7 +71,7 @@ const ArcGISMapPage = () => {
               };
 
               axios
-                .post(`${process.env.NEXT_PUBLIC_API_URL}/markers`, newPoint)
+                .post(`${process.env.NEXT_PUBLIC_API_URL}/register`, newPoint)
                 .then((response) => {
                   const markerId = response.data._id;
                   if (!markerId) {
@@ -105,7 +105,7 @@ const ArcGISMapPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.NEXT_PUBLIC_API_URL}/markers`)
+      .get(`${process.env.NEXT_PUBLIC_API_URL}`)
       .then((response) => {
         dispatch(setMarkers(response.data));
         initMap();
@@ -118,7 +118,7 @@ const ArcGISMapPage = () => {
 
   const deleteMarker = (markerId) => {
     axios
-      .delete(`${process.env.NEXT_PUBLIC_API_URL}/markers${markerId}`)
+      .delete(`${process.env.NEXT_PUBLIC_API_URL}/markers/${markerId}`)
       .then(() => {
         console.log("Counter successfully eliminated");
         dispatch(removeMarker(markerId));
