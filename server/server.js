@@ -1,3 +1,4 @@
+require("dotenv").config({ path: "./.env.example" });
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -5,7 +6,7 @@ const app = express();
 const cors = require("cors");
 const userRoutes = require("./Routes/userRoutes");
 const markerRoutes = require("./Routes/markerRoutes");
-require("dotenv").config({ path: "./.env.example" });
+
 
 app.use(bodyParser.json());
 app.use(cors());
