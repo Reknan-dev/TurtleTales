@@ -29,7 +29,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post(NEXT_PUBLIC_API_URL, formData);
+      await axios.post(process.env.NEXT_PUBLIC_API_URL, formData);
       dispatch(setRegistrationSuccess(true));
       dispatch(clearFormData());
     } catch (error) {
