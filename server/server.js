@@ -16,7 +16,11 @@ const corsOptions = {
   optionsSuccessStatus: 204,
   allowedHeaders: ["Content-Type", "Authorization"]
 };
-app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: 'https://turtle-tales.vercel.app',
+  optionsSuccessStatus: 200
+}));
 app.use(userRoutes);
 app.use(markerRoutes);
 
