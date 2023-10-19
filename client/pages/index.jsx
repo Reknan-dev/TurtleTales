@@ -12,7 +12,7 @@ import {
 export default function Register() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+ 
 
   const formData = useSelector((state) => state.user.formData);
   const errors = useSelector((state) => state.user.errors);
