@@ -19,7 +19,7 @@ export default function Register() {
   const registrationSuccess = useSelector(
     (state) => state.user.registrationSuccess
   );
-
+  console.log("Request received for registration", req.body)
   const handleSubmit = async (e) => {
     e.preventDefault();
     let validationErrors = {};
