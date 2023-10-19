@@ -9,22 +9,9 @@ const markerRoutes = require("./Routes/markerRoutes");
 
 
 app.use(bodyParser.json());
-const corsOptions = {
-  origin: 'https://turtle-tales.vercel.app',
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: ["Content-Type", "Authorization"]
-};
-
-app.use(cors({
-  origin: 'https://turtle-tales.vercel.app',
-  optionsSuccessStatus: 200
-}));
+app.use(cors());
 app.use(userRoutes);
 app.use(markerRoutes);
-
-
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
