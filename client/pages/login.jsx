@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "/api/login",
+        NEXT_PUBLIC_API_URL,
         formData
       );
       localStorage.setItem("token", response.data.token);
