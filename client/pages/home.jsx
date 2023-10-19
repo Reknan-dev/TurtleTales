@@ -6,9 +6,10 @@ import Footer from "../components/Footer";
 import MapComponent from "../components/MapComponent"
 import IstructionMap from "../components/InstructionMap"
 import InspirationSection from "../components/InspirationSection";
+import withAuth from '../context/withAuth';
 
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <Header />
@@ -23,3 +24,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default withAuth(Home);
