@@ -19,7 +19,7 @@ export default function Header() {
   useEffect(() => {
     if (token) {
       axios
-        .get("http://localhost:3000/get-user-info", {
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/get-user-info`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
