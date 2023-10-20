@@ -12,10 +12,10 @@ registerUser = async (req, res) => {
 
   const errors = {};
   if (existingUser) {
-    errors.email = "Email già registrata.";
+    errors.email = "Email already exist";
   }
   if (existingUserByUsername) {
-    errors.username = "Username già registrato.";
+    errors.username = "Username already exist";
   }
 
   if (Object.keys(errors).length > 0) {
@@ -32,9 +32,9 @@ registerUser = async (req, res) => {
       email,
     });
     await user.save();
-    res.status(201).send({ message: "Utente registrato con successo!" });
+    res.status(201).send({ message: "User registered" });
   } catch (error) {
-    res.status(500).send({ error: "Errore durante la registrazione." });
+    res.status(500).send({ error: "Error during the registration" });
   }
 };
 
