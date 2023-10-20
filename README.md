@@ -103,7 +103,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Benedetto Caiazzo - benedettocaiazzo8409@gmail.com
+Benedetto Caiazzo - https://www.linkedin.com/in/benedetto-caiazzo-2ba997261/
 
 Project Link: [https://github.com/Reknan-dev/TurtleTales](https://github.com/Reknan-dev/TurtleTales)
 
