@@ -25,7 +25,7 @@ export default function Header() {
           },
         })
         .then((response) => {
-          // ora response è definita in questo blocco
+         
           dispatch(setUsername(response.data.username));
         })
         .catch((error) => {
