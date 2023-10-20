@@ -51,10 +51,10 @@ export default function Register() {
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-skyblue bg-opacity-20 backdrop-blur-sm p-4 mt-[-150px]">
           <div className="px-6 py-4">
             <h2 className="font-bold text-deepblue text-xl mb-6 text-center">
-              Registrazione avvenuta con successo!
+              Registration successful!
             </h2>
             <p className="text-center">
-              Effettua il{" "}
+              Go to{" "}
               <Link className="text-blue-500 hover:text-blue-700" href="/login">
                 Login
               </Link>
@@ -71,7 +71,7 @@ export default function Register() {
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-skyblue bg-opacity-20 backdrop-blur-sm p-4 mt-[-150px]">
         <div className="px-6 py-4">
           <h2 className="font-bold text-deepblue text-xl mb-6 text-center">
-            Registrazione
+            Registration
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -140,12 +140,12 @@ export default function Register() {
                 className="bg-ocean hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
-                Registrati
+                Register
               </button>
             </div>
           </form>
           <div className="mt-4">
-            Sei già registrato? Effettua il{" "}
+            Already registered? Go to {" "}
             <Link className="text-skyblue hover:text-ocean" href="/login">
               Login
             </Link>
