@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
 
     <Provider store={store}>
        <Head>
-        <title>Turtle Tales</title>
+        <title>TurtleTales</title>
         <meta name="Turtle Tales" content="A social platform for help us to save turtles and fight the destruction of their nests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
