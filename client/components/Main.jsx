@@ -1,12 +1,4 @@
-import MapComponent from "./MapComponent"
-
-const handleScrollToComponent = (e) => {
-  e.preventDefault();
-  const element = document.getElementById("mapDiv");
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-};
+import Link from "next/link";
 
 export default function Main() {
   return (
@@ -14,14 +6,11 @@ export default function Main() {
       <p className="title text-turtle text-5xl">
         <strong>Help us to find them</strong>
       </p>
-
-      <button
-        onClick={handleScrollToComponent}
-        className="join-button font-bold mt-3 w-28 px-4 py-2 hover:bg-scarlet hover:border-scarlet border-2 border-white rounded-3xl text-white duration-500"
-      >
-        JOIN
-      </button>
-      <MapComponent />
+      <Link href="#mapDiv">
+        <button className="join-button font-bold mt-3 w-28 px-4 py-2 hover:bg-scarlet hover:border-scarlet border-2 border-white rounded-3xl text-white duration-500">
+          JOIN
+        </button>
+      </Link>
     </main>
   );
 }
