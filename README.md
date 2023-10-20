@@ -18,16 +18,16 @@
 
 
   <p align="center">
-Explore a wide range of delicious and healthy vegetarian recipes with Green Bites. Whether you're a long-time vegetarian or simply looking to try something new and healthy, we have something to suit all tastes. Use our intuitive search bar to find exactly what you're looking for or get inspired by our most popular dishes. Each recipe comes with detailed instructions and an ingredient list to make your culinary journey simple and enjoyable. Dive into the world of vegetarian food and discover new flavors with Green Bites.
+Beach erosion is inexorably reducing suitable space for nesting. Furthermore, the trampling of wet people and the use of vehicles heavy to clean beaches can cause the destruction of entire nests. Light pollution is another important source of disturbance for the little turtles that have just emerged from the nest, who are not disoriented they manage to find the sea. Help us reporting on the map their presence.
     <br />
-    <a href="https://github.com/Reknan-dev/Green-Bites"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Reknan-dev/TurtleTales"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://green-bites.netlify.app">View Demo</a>
+    <a href="turtle-tales.vercel.app">View Demo</a>
     ·
-    <a href="https://github.com/Reknan-dev/Green-Bites/issues">Report Bug</a>
+    <a href="https://github.com/Reknan-dev/TurtleTales/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Reknan-dev/Green-Bites/pulls">Request Feature</a>
+    <a href="https://github.com/Reknan-dev/TurtleTales/pulls">Request Feature</a>
   </p>
 </div>
 
@@ -57,7 +57,7 @@ Explore a wide range of delicious and healthy vegetarian recipes with Green Bite
 ## About The Project
 
  
-I created this web app for my studies at Start2Impact University, as a practice project for my React skills
+I created this web app for my final project at Start2Impact University, as a practice project for my full stack developing skills.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -66,13 +66,20 @@ I created this web app for my studies at Start2Impact University, as a practice 
 
 ### Built With
 
-[![My Skills](https://skills.thijs.gg/icons?i=html,css,js,redux,react,&theme=light)](https://skills.thijs.gg)
+## Front End
 
+[![My Skills](https://skills.thijs.gg/icons?i=html,css,js,redux,nextjs,&theme=light)](https://skills.thijs.gg)
+
+## Back End
+
+[![My Skills](https://skills.thijs.gg/icons?i=nodejs,express,mongodb,redux,nextjs,&theme=light)](https://skills.thijs.gg)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### External Services
 
+- ArcGISMap
 
 
 <!-- USAGE EXAMPLES -->
