@@ -21,6 +21,7 @@ export default function Main() {
       >
         JOIN
       </button>
+      <MapComponent />
     </main>
   );
 }
