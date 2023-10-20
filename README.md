@@ -64,7 +64,7 @@ I created this web app for my final project at Start2Impact University, as a pra
 
 
 
-### Built With
+# Built With
 
 ## Front End
 
@@ -72,12 +72,12 @@ I created this web app for my final project at Start2Impact University, as a pra
 
 ## Back End
 
-[![My Skills](https://skills.thijs.gg/icons?i=nodejs,express,mongodb,redux,nextjs,&theme=light)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=nodejs,express,mongodb&theme=light)](https://skills.thijs.gg)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### External Services
+## External Services
 
 - ArcGISMap
 
