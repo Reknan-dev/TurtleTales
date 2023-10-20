@@ -1,4 +1,4 @@
-
+import MapComponent from "./MapComponent"
 
 const handleScrollToComponent = (e) => {
   e.preventDefault();
