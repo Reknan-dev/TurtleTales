@@ -105,7 +105,7 @@ const ArcGISMapPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.NEXT_PUBLIC_API_URL}`)
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/markers`)
       .then((response) => {
         dispatch(setMarkers(response.data));
         initMap();
