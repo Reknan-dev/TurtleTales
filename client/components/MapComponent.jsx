@@ -71,7 +71,7 @@ const ArcGISMapPage = () => {
               };
 
               axios
-                .post(`${process.env.NEXT_PUBLIC_API_URL}/register`, newPoint)
+                .post(`${process.env.NEXT_PUBLIC_API_URL}/markers`, newPoint)
                 .then((response) => {
                   const markerId = response.data._id;
                   if (!markerId) {
