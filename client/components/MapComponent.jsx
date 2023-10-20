@@ -112,7 +112,7 @@ const ArcGISMapPage = () => {
       })
 
       .catch((error) => {
-        console.error("Error retrieving tokens:", error);
+        console.error("Error retrieving tokens:", error.response ? error.response.data : error.message);
       });
   }, [dispatch]);
 
