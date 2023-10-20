@@ -85,32 +85,10 @@ I created this web app for my final project at Start2Impact University, as a pra
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use our intuitive search bar to find a recipe that you're looking for or get inspired. After you search, click on the button "recipe" for instructions and ingredients.
+Click on the map to report sightings of hatches or sea turtles.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
@@ -127,7 +105,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Benedetto Caiazzo - benedettocaiazzo8409@gmail.com
 
-Project Link: [https://github.com/Reknan-dev/Green-Bites](https://github.com/Reknan-dev/Green-Bites)
+Project Link: [https://github.com/Reknan-dev/TurtleTales](https://github.com/Reknan-dev/TurtleTales)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
