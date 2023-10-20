@@ -23,7 +23,7 @@ export default function Section() {
       <div className="relative w-full">
         <img
           src="/images/turtle.jpg"
-          alt="Turtle Image"
+          alt="Turtle image"
           className="w-full object-contain"
         />
 
