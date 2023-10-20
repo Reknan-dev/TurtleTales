@@ -126,7 +126,7 @@ export default function Register() {
                 onChange={(e) =>
                   dispatch(setFormData({ ...formData, confirmPassword: e.target.value }))
                 }
-                placeholder="Conferma Password"
+                placeholder="Confirm Password"
                 required
               />
               {errors.confirmPassword && (
