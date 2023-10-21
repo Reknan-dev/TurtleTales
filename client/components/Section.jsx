@@ -20,7 +20,7 @@ export default function Section() {
         species.
       </p>
 
-      <div className="relative w-full">
+      <div className="relative w-full pb-32">
         <img
           src="/images/turtle.jpg"
           alt="Turtle image"
