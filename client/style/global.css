@@ -20,9 +20,9 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ .title {
+  width: 50%;
+ }
 }
+ 
+
