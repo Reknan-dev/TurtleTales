@@ -27,8 +27,11 @@ p {
 
  .map-container {
   display: flex;
-  flex-direction: column-reverse;
-  
+  flex-direction: column;
+ }
+
+ .user-welcome {
+  margin-left: 20px;
  }
 }
  

@@ -50,7 +50,7 @@ export default function Header() {
         </Link>
         {username && (
           <div className="flex flex-col justify-center items-center">
-            <div>Welcome, {username}!</div>
+            <div className="user-welcome">Welcome, {username}!</div>
             <button
               className="font-bold mt-3 w-20 px-4 hover:bg-scarlet hover:border-scarlet border-2 border-white rounded-3xl text-white duration-500"
               onClick={handleLogout}
