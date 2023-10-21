@@ -4,7 +4,6 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setMarkers, addMarker, removeMarker } from "../slices/markerSlice";
 
-
 const ArcGISMapPage = () => {
   const dispatch = useDispatch();
   const markers = useSelector((state) => state.marker.markers);
@@ -112,7 +111,10 @@ const ArcGISMapPage = () => {
       })
 
       .catch((error) => {
-        console.error("Error retrieving tokens:", error.response ? error.response.data : error.message);
+        console.error(
+          "Error retrieving tokens:",
+          error.response ? error.response.data : error.message
+        );
       });
   }, [dispatch]);
 
@@ -128,7 +130,16 @@ const ArcGISMapPage = () => {
       });
   };
 
-  return <div id="mapDiv" className="h-128 w-1/2" />;
+  return (
+    <div>
+      <div id="mapDiv" className="h-128 w-full" />
+      <div className="bg-sand flex flex-col justify-center items-center pb-12 pt-12">
+        <p className="mb-2.5 font-bold text-3xl text-center w-4/5">
+          Click on the map to report sightings of hatches or sea turtles
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default ArcGISMapPage;
