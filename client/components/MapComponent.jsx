@@ -128,7 +128,7 @@ const ArcGISMapPage = () => {
       });
   };
 
-  return <div id="mapDiv" className="h-128 w-full" />;
+  return <div id="mapDiv" className="h-128 w-1/2" />;
 };
 
 export default ArcGISMapPage;
