@@ -20,19 +20,13 @@ p {
 }
 
 @media screen and (max-width: 480px) {
- .title {
-  width: 50%;
-  font-size: 48px;
- }
 
  .map-container {
   display: flex;
   flex-direction: column;
  }
 
- .user-welcome {
-  margin-left: 40px;
- }
+
 }
  
 
