@@ -4,7 +4,6 @@ import Section from "../components/Section";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MapComponent from "../components/MapComponent";
-import IstructionMap from "../components/InstructionMap";
 import InspirationSection from "../components/InspirationSection";
 import withAuth from "../context/withAuth";
 
