@@ -137,7 +137,7 @@ const ArcGISMapPage = () => {
           Click on the map to report sightings of hatches or sea turtles
         </p>
       </div>
-      <div id="mapDiv" className="h-128 w-1/2" />
+      <div id="mapDiv" className="h-128 w-full" />
     </div>
   );
 };
