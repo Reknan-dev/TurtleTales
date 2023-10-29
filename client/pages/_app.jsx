@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>TurtleTales</title>
         <meta property="og:image" content="/banner.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="TurtleTales" />
