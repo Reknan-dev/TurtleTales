@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <Head>
         <title>TurtleTales</title>
-        <meta property="og:image" content="/background.jpg" />
+        <meta property="og:image" content="/preview.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
