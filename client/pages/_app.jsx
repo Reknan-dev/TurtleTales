@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/background.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:height" content="627" />
         <meta property="og:title" content="TurtleTales" />
         <meta
           property="og:description"
