@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 export default function InspirationSection() {
   return (
     <div className="bg-sand w-full h-96 flex justify-center items-center text-base">

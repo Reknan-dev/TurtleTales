@@ -7,7 +7,6 @@ const cors = require("cors");
 const userRoutes = require("./Routes/userRoutes");
 const markerRoutes = require("./Routes/markerRoutes");
 
-
 app.use(bodyParser.json());
 app.use(cors());
 app.use(userRoutes);

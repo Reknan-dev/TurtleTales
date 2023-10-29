@@ -21,12 +21,10 @@ p {
 
 @media screen and (max-width: 480px) {
 
- .map-container {
-  display: flex;
-  flex-direction: column;
- }
+  .map-container {
+    display: flex;
+    flex-direction: column;
+  }
 
 
 }
- 
-

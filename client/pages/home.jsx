@@ -13,9 +13,7 @@ function Home() {
       <Header />
       <Main />
       <Section />
-
       <MapComponent />
-
       <InspirationSection />
       <Footer />
     </div>

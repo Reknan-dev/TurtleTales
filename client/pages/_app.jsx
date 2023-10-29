@@ -6,11 +6,13 @@ import Head from "next/head";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-
     <Provider store={store}>
-       <Head>
+      <Head>
         <title>TurtleTales</title>
-        <meta name="Turtle Tales" content="A social platform for help us to save turtles and fight the destruction of their nests" />
+        <meta
+          name="Turtle Tales"
+          content="A social platform for help us to save turtles and fight the destruction of their nests"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PersistGate loading={null} persistor={persistor}>

@@ -14,7 +14,9 @@ const markerSlice = createSlice({
       state.markers.push(action.payload);
     },
     removeMarker: (state, action) => {
-      state.markers = state.markers.filter(marker => marker._id !== action.payload);
+      state.markers = state.markers.filter(
+        (marker) => marker._id !== action.payload
+      );
     },
     setMarkerErrors: (state, action) => {
       state.errors = action.payload;
@@ -22,10 +24,6 @@ const markerSlice = createSlice({
   },
 });
 
-export const {
-  setMarkers,
-  addMarker,
-  removeMarker,
-  setMarkerErrors,
-} = markerSlice.actions;
+export const { setMarkers, addMarker, removeMarker, setMarkerErrors } =
+  markerSlice.actions;
 export default markerSlice.reducer;

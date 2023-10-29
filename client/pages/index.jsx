@@ -12,7 +12,6 @@ import {
 export default function Register() {
   const dispatch = useDispatch();
   const router = useRouter();
- 
 
   const formData = useSelector((state) => state.user.formData);
   const errors = useSelector((state) => state.user.errors);
@@ -28,7 +27,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, formData);
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, formData);
       dispatch(setRegistrationSuccess(true));
       router.push("/login");
       dispatch(clearFormData());
@@ -79,7 +78,9 @@ export default function Register() {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 value={formData.username}
                 onChange={(e) =>
-                  dispatch(setFormData({ ...formData, username: e.target.value }))
+                  dispatch(
+                    setFormData({ ...formData, username: e.target.value })
+                  )
                 }
                 placeholder="Username"
                 required
@@ -109,7 +110,9 @@ export default function Register() {
                 type="password"
                 value={formData.password}
                 onChange={(e) =>
-                  dispatch(setFormData({ ...formData, password: e.target.value }))
+                  dispatch(
+                    setFormData({ ...formData, password: e.target.value })
+                  )
                 }
                 placeholder="Password"
                 required
@@ -124,7 +127,12 @@ export default function Register() {
                 type="password"
                 value={formData.confirmPassword}
                 onChange={(e) =>
-                  dispatch(setFormData({ ...formData, confirmPassword: e.target.value }))
+                  dispatch(
+                    setFormData({
+                      ...formData,
+                      confirmPassword: e.target.value,
+                    })
+                  )
                 }
                 placeholder="Confirm Password"
                 required
@@ -145,7 +153,7 @@ export default function Register() {
             </div>
           </form>
           <div className="mt-4">
-            Already registered? Go to {" "}
+            Already registered? Go to{" "}
             <Link className="text-skyblue hover:text-ocean" href="/login">
               Login
             </Link>

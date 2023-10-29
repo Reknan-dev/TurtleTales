@@ -19,13 +19,12 @@ export default function Header() {
   useEffect(() => {
     if (token) {
       axios
-        .get(`${process.env.NEXT_PUBLIC_API_URL}/get-user-info`, {
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         })
         .then((response) => {
-         
           dispatch(setUsername(response.data.username));
         })
         .catch((error) => {

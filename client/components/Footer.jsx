@@ -6,18 +6,14 @@ export default function Footer() {
           <img src="/images/logo.png" alt="Logo" className="w-20" />
         </div>
 
-        <div className="flex items-center"> {/* Aggiunto wrapper flex per il testo */}
-          <small>
-            Benedetto Caiazzo 2023. All rights reserved
-          </small>
+        <div className="flex items-center">
+          <small>Benedetto Caiazzo 2023. All rights reserved</small>
         </div>
-        
+
         <div>
           <img className="w-72" src="/images/s2i-logo.png" />
         </div>
       </div>
     </footer>
   );
-};
-
-
+}

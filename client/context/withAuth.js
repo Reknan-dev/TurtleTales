@@ -1,13 +1,13 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React from "react";
+import { useRouter } from "next/router";
 
 function withAuth(WrappedComponent) {
-  return function(props) {
+  return function (props) {
     const router = useRouter();
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
 
     if (!token) {
-      router.push('/login');
+      router.push("/login");
       return null;
     }
 

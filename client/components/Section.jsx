@@ -16,8 +16,7 @@ export default function Section() {
       </p>
 
       <p className="mt-2.5 text-sm text-center w-4/5 max-w-4xl pb-32">
-        You can help us fight the destruction of nests and protect this
-        species.
+        You can help us fight the destruction of nests and protect this species.
       </p>
 
       <div className="relative w-full pb-32">

@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 
 // Registrazione
 registerUser = async (req, res) => {
-  
   const { username, password, email } = req.body;
 
   const existingUser = await User.findOne({ email });
@@ -66,11 +65,9 @@ getUserInfo = async (req, res) => {
     }
     res.send(user);
   } catch (error) {
-    res
-      .status(500)
-      .send({
-        error: "Error retrieving user information",
-      });
+    res.status(500).send({
+      error: "Error retrieving user information",
+    });
   }
 };
 

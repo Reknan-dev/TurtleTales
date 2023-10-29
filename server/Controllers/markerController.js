@@ -1,4 +1,4 @@
-const Marker = require('../Models/Marker')
+const Marker = require("../Models/Marker");
 
 exports.createMarker = async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -9,7 +9,7 @@ exports.createMarker = async (req, res) => {
     res.status(201).send(marker);
   } catch (error) {
     console.error("Error saving marker:", error);
-    res.status(500).send({ error: 'Server error' });
+    res.status(500).send({ error: "Server error" });
   }
 };
 
@@ -19,17 +19,17 @@ exports.getMarkers = async (req, res) => {
     res.send(markers);
   } catch (error) {
     console.error("Error retrieving tokens:", error);
-    res.status(500).send({ error: 'Server error' });
+    res.status(500).send({ error: "Server error" });
   }
 };
 
 exports.deleteMarker = async (req, res) => {
-  const markerId = req.params.id; 
+  const markerId = req.params.id;
   try {
-      await Marker.findByIdAndDelete(markerId);
-      res.status(200).send({ message: 'Counter successfully eliminated' });
+    await Marker.findByIdAndDelete(markerId);
+    res.status(200).send({ message: "Counter successfully eliminated" });
   } catch (error) {
-      console.error('Error deleting marker', error);
-      res.status(500).send({ error: 'Server Error' });
+    console.error("Error deleting marker", error);
+    res.status(500).send({ error: "Server Error" });
   }
 };
