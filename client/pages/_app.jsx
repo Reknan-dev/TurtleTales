@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="TurtleTales" />
         <meta
           property="og:description"
-          content="help to search for turtles, all it takes is one click."
+          content="help to search for turtles, all it takes is one click!"
         />
         <meta
           name="Turtle Tales"
