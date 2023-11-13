@@ -71,8 +71,11 @@ export default function Login() {
                 type="submit"
                 disabled={loading}
               >
-                <div className="loader"></div>
-                Login
+                {loading ? (
+                  <div className="loader"></div> // Mostra il loader
+                ) : (
+                  "Login"
+                )}
               </button>
             </div>
           </form>
