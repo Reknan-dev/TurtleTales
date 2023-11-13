@@ -72,8 +72,7 @@ export default function Login() {
                 disabled={loading}
               >
                 {loading ? (
-                  <div className="w-28 h-28 border-5 border-solid border-white border-t-orange-500 rounded-full inline-block box-border animate-rotation "></div>
-          
+                  <div className="w-28 h-28 border-5 border-solid border-white border-t-orange-500 rounded-full inline-block box-border animate-rotation"></div>
                 ) : (
                   "Login"
                 )}
