@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { setFormData, setToken, setErrors, setLoading } from "../slices/userSlice";
+import { setFormData, setToken, setErrors, setLoading, setSubmitting } from "../slices/userSlice";
 
 export default function Login() {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.user.formData);
   const loading = useSelector((state) => state.user.loading);
   const errors = useSelector((state) => state.user.errors);
+  const isSubmitting = useSelector((state) => state.user.isSubmitting);
   const router = useRouter();
   const handleInputChange = (field) => (e) => {
     dispatch(setFormData({ ...formData, [field]: e.target.value }));
@@ -15,6 +16,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(setSubmitting(true));
     try {
       dispatch(setLoading(true));
       const response = await axios.post(
@@ -32,6 +34,7 @@ export default function Login() {
       } 
     } finally {
       dispatch(setLoading(false)); // Disattiva il loader
+      dispatch(setSubmitting(false));
     }
   };
 
@@ -50,6 +53,7 @@ export default function Login() {
                 onChange={handleInputChange("username")}
                 placeholder="Username"
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div className="mb-6">
@@ -60,6 +64,7 @@ export default function Login() {
                 onChange={handleInputChange("password")}
                 placeholder="Password"
                 required
+                disabled={isSubmitting}
               />
               {errors.login && (
                 <div className="text-scarlet text-sm">{errors.login}</div>
@@ -69,7 +74,7 @@ export default function Login() {
               <button
                 className="bg-ocean hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
-                disabled={loading}
+                disabled={isSubmitting || loading}
               >
                 {loading ? (
                   <div className="loader"></div>
