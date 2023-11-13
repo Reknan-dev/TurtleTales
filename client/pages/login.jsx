@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { setFormData, setToken, setErrors, setLoading } from "../slices/userSlice";
+import {
+  setFormData,
+  setToken,
+  setErrors,
+  setLoading,
+} from "../slices/userSlice";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -29,7 +34,7 @@ export default function Login() {
         dispatch(setErrors({ login: "Invalid username or password" }));
       } else {
         console.error("Error logging in:", error);
-      } 
+      }
     } finally {
       dispatch(setLoading(false)); // Disattiva il loader
     }
@@ -72,7 +77,7 @@ export default function Login() {
                 disabled={loading}
               >
                 {loading ? (
-                  <div className="loader"></div> // Mostra il loader
+                  <div className="w-28 h-28 border-5 border-solid border-white border-t-orange-500 rounded-full inline-block box-border animate-rotation"></div>
                 ) : (
                   "Login"
                 )}
