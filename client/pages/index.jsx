@@ -93,6 +93,7 @@ export default function Register() {
                 }
                 placeholder="Username"
                 required
+                disabled={isSubmitting}
               />
               {errors.username && (
                 <div className="text-scarlet text-sm">{errors.username}</div>
@@ -108,6 +109,7 @@ export default function Register() {
                 }
                 placeholder="Email"
                 required
+                disabled={isSubmitting}
               />
               {errors.email && (
                 <div className="text-scarlet text-sm">{errors.email}</div>
@@ -125,6 +127,7 @@ export default function Register() {
                 }
                 placeholder="Password"
                 required
+                disabled={isSubmitting}
               />
               {errors.password && (
                 <div className="text-scarlet text-sm">{errors.password}</div>
@@ -145,6 +148,7 @@ export default function Register() {
                 }
                 placeholder="Confirm Password"
                 required
+                disabled={isSubmitting}
               />
               {errors.confirmPassword && (
                 <div className="text-scarlet text-sm">
