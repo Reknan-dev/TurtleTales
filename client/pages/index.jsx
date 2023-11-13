@@ -31,7 +31,10 @@ export default function Register() {
     }
 
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, formData);
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
+        formData
+      );
       dispatch(setRegistrationSuccess(true));
       router.push("/login");
       dispatch(clearFormData());
@@ -40,7 +43,7 @@ export default function Register() {
         validationErrors = { ...validationErrors, ...error.response.data };
       } else {
         console.error("Error during registration:", error);
-      } 
+      }
     } finally {
       dispatch(setSubmitting(false)); // Termina l'invio del modulo
     }
@@ -155,7 +158,11 @@ export default function Register() {
                 type="submit"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? <div className="loader"></div> : "Register"}
+                {isSubmitting ? ( 
+                  <div className="loader"></div> 
+                ) : (
+                  "Register"
+                )}
               </button>
             </div>
           </form>
