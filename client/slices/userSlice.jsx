@@ -36,6 +36,9 @@ const userSlice = createSlice({
     setRegistrationSuccess: (state, action) => {
       state.registrationSuccess = action.payload;
     },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
     clearFormData: (state) => {
       state.formData = {
         username: "",
@@ -54,6 +57,7 @@ export const {
   logoutUser,
   setFormData,
   setRegistrationSuccess,
+  setLoading,
   clearFormData,
 } = userSlice.actions;
 export default userSlice.reducer;

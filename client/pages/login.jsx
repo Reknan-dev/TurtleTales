@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { setFormData, setToken, setErrors } from "../slices/userSlice";
+import { setFormData, setToken, setErrors, setLoading } from "../slices/userSlice";
 
 export default function Login() {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.user.formData);
+  const loading = useSelector((state) => state.user.loading);
   const errors = useSelector((state) => state.user.errors);
   const router = useRouter();
   const handleInputChange = (field) => (e) => {
@@ -15,6 +16,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      dispatch(setLoading(true));
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
         formData
@@ -27,7 +29,9 @@ export default function Login() {
         dispatch(setErrors({ login: "Invalid username or password" }));
       } else {
         console.error("Error logging in:", error);
-      }
+      } 
+    } finally {
+      dispatch(setLoading(false)); // Disattiva il loader
     }
   };
 
@@ -65,7 +69,9 @@ export default function Login() {
               <button
                 className="bg-ocean hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
+                disabled={loading}
               >
+                <div className="loader"></div>
                 Login
               </button>
             </div>
