@@ -9,6 +9,7 @@ const userSlice = createSlice({
       general: null,
     },
     registrationSuccess: false,
+    loading: false,
     formData: {
       username: "",
       email: "",
