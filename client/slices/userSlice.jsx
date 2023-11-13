@@ -16,6 +16,7 @@ const userSlice = createSlice({
       password: "",
       confirmPassword: "",
     },
+    isSubmitting: false,
   },
   reducers: {
     setToken: (state, action) => {
@@ -48,6 +49,9 @@ const userSlice = createSlice({
         confirmPassword: "",
       };
     },
+    setSubmitting: (state, action) => {
+      state.isSubmitting = action.payload;
+    },
   },
 });
 
@@ -59,6 +63,7 @@ export const {
   setFormData,
   setRegistrationSuccess,
   setLoading,
+  setSubmitting,
   clearFormData,
 } = userSlice.actions;
 export default userSlice.reducer;

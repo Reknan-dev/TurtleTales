@@ -6,11 +6,13 @@ import {
   setFormData,
   setErrors,
   setRegistrationSuccess,
+  setSubmitting,
   clearFormData,
 } from "../slices/userSlice";
 
 export default function Register() {
   const dispatch = useDispatch();
+  const isSubmitting = useSelector((state) => state.user.isSubmitting);
   const router = useRouter();
 
   const formData = useSelector((state) => state.user.formData);
@@ -20,6 +22,8 @@ export default function Register() {
   );
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(setSubmitting(true)); // Inizia l'invio del modulo
+
     let validationErrors = {};
 
     if (formData.password !== formData.confirmPassword) {
@@ -36,7 +40,9 @@ export default function Register() {
         validationErrors = { ...validationErrors, ...error.response.data };
       } else {
         console.error("Error during registration:", error);
-      }
+      } 
+    } finally {
+      dispatch(setSubmitting(false)); // Termina l'invio del modulo
     }
 
     if (Object.keys(validationErrors).length > 0) {
@@ -147,8 +153,9 @@ export default function Register() {
               <button
                 className="bg-ocean hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
+                disabled={isSubmitting}
               >
-                Register
+                {isSubmitting ? <div className="loader"></div> : "Register"}
               </button>
             </div>
           </form>
