@@ -21,9 +21,8 @@ p {
 
 .loader {
   width: 28px;
-  height: 28px;
   border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
+  border-bottom-color: #AB1E3D;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
