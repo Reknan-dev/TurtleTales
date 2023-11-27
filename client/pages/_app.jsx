@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PersistGate loading={null} persistor={persistor}>
-        <div className="min-h-screen bg-[url('/images/background.jpg')] bg-cover bg-center">
+        <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1589634749362-a8ef3056cbe9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
           <Component {...pageProps} />
         </div>
       </PersistGate>
