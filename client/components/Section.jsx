@@ -21,7 +21,7 @@ export default function Section() {
 
       <div className="relative w-full pb-32">
         <img
-          src="https://images.unsplash.com/photo-1568660357733-823cbddb0f6a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1588293491737-070ef4cdb924?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Turtle image"
           className="w-full object-contain"
         />
