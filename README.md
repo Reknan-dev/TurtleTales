@@ -3,7 +3,7 @@
 
 
 <div align="center">
-    <img src="client/public/images/banner.png" alt="Logo" width="600" height="300">
+    <img src="client/public/images/logo.png" alt="Logo" width="600" height="300">
 </div>
 
 
