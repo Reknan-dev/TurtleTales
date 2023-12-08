@@ -23,7 +23,7 @@ Beach erosion is inexorably reducing suitable space for nesting. Furthermore, th
     <a href="https://github.com/Reknan-dev/TurtleTales"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="turtle-tales.vercel.app">View Demo</a>
+    <a href="[turtle-tales.vercel.app](https://turtle-tales.vercel.app/)">View Demo</a>
     ·
     <a href="https://github.com/Reknan-dev/TurtleTales/issues">Report Bug</a>
     ·
